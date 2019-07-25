@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom'
 import {useDarkMode} from '../hooks/useDarkMode'
 
 const Navbar = () => {
@@ -14,6 +15,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
+      <NavLink to="/">Coins</NavLink>
+      <NavLink to="/shitcoins">Shit Coins</NavLink>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}

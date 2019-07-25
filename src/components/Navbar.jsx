@@ -15,8 +15,38 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
-      <NavLink to="/">Coins</NavLink>
-      <NavLink to="/shitcoins">Shit Coins</NavLink>
+      <NavLink 
+        to="/"
+        exact
+        style={{
+          fontSize: "18px",
+          textDecoration: "none",
+          color: darkMode ? "white" : "black"
+        }}
+        activeStyle={{
+          fontSize: "18px",
+          fontWeight: "bold",
+          textDecoration: "none",
+          color: darkMode ? "white" : "black"
+        }}
+      >
+        Coins
+      </NavLink>
+      <NavLink to="/shitcoins"
+        style={{
+          fontSize: "18px",
+          textDecoration: "none",
+          color: darkMode ? "white" : "black"
+        }}
+        activeStyle={{
+          fontSize: "18px",
+          fontWeight: "bold",
+          textDecoration: "none",
+          color: darkMode ? "white" : "black"
+        }}
+      >
+        Shit Coins
+      </NavLink>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}

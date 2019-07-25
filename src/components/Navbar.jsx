@@ -8,7 +8,7 @@ const Navbar = () => {
     setDarkMode(!darkMode);
   };
   useEffect( _ => {
-    if (darkMode) document.body.classList.remove("dark-mode")
+    if (!darkMode) document.body.classList.remove("dark-mode")
     else document.body.classList.add("dark-mode")
   }, [darkMode])
   return (
